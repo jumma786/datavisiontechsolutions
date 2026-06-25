@@ -40,7 +40,7 @@
     { k: ["plant", "machinery", "machine", "equipment", "motor", "transformer", "switchgear"],
       a: 'We buy redundant <b>plant &amp; machinery</b> — industrial machines, electric motors, transformers and switchgear. Send a few photos and the location for a valuation. '
         + CONTACT },
-    { k: ["collect", "collection", "pickup", "pick up", "pick-up", "area", "where", "region", "birmingham", "west midlands", "do you cover", "come to"],
+    { k: ["collect", "collection", "pickup", "pick up", "pick-up", "area", "region", "birmingham", "west midlands", "do you cover", "come to"],
       a: 'We offer <b>free collection</b> for trade and larger loads across <b>Birmingham and the West Midlands</b>, and you’re welcome to deliver to us too. '
         + 'Where are you based? ' + CONTACT },
     { k: ["pay", "paid", "payment", "cash", "bank", "transfer", "how do i get paid", "money"],
