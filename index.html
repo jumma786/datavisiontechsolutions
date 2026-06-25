@@ -407,13 +407,34 @@ a{color:inherit;text-decoration:none;}
 .footer-legal a{color:rgba(255,255,255,0.5);transition:color var(--transition);}
 .footer-legal a:hover{color:#fff;}
 
-/* ─── COOKIE NOTICE ─── */
-.cookie-bar{position:fixed;left:20px;bottom:20px;max-width:380px;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-lg);border-radius:var(--radius-lg);padding:20px;z-index:120;font-size:0.82rem;color:var(--text-light);display:none;}
-.cookie-bar.show{display:block;}
-.cookie-bar p{margin-bottom:14px;line-height:1.6;}
-.cookie-bar a{color:var(--accent);font-weight:600;}
-.cookie-bar .btn{padding:10px 22px;font-size:0.8rem;}
-@media(max-width:768px){.cookie-bar{left:16px;right:16px;bottom:16px;max-width:none;}}
+/* ─── COOKIE CONSENT ─── */
+.cookie-banner{position:fixed;left:20px;bottom:20px;max-width:420px;background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-lg);border-radius:var(--radius-lg);padding:22px;z-index:120;font-size:0.82rem;color:var(--text-light);display:none;}
+.cookie-banner.show{display:block;}
+.cookie-title{font-weight:700;color:var(--text);font-size:0.95rem;margin-bottom:8px;}
+.cookie-banner p{margin-bottom:14px;line-height:1.6;}
+.cookie-banner a{color:var(--accent);font-weight:600;}
+.cookie-actions{display:flex;flex-wrap:wrap;gap:8px;}
+.cookie-actions .btn{padding:10px 18px;font-size:0.78rem;cursor:pointer;border-radius:var(--radius);font-weight:600;}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--text-light);}
+.btn-ghost:hover{background:var(--bg-alt);}
+.cookie-modal{position:fixed;inset:0;background:rgba(15,25,35,0.6);z-index:130;display:none;align-items:center;justify-content:center;padding:20px;}
+.cookie-modal.show{display:flex;}
+.cookie-modal-box{background:#fff;border-radius:var(--radius-lg);max-width:520px;width:100%;max-height:90vh;overflow-y:auto;padding:28px;box-shadow:var(--shadow-lg);}
+.cookie-modal-box h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;color:var(--text);margin-bottom:8px;}
+.cookie-modal-desc{font-size:0.85rem;color:var(--text-light);margin-bottom:18px;line-height:1.6;}
+.cookie-cat{border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px;}
+.cookie-cat-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:12px;}
+.cookie-cat-head strong{color:var(--text);font-size:0.92rem;}
+.cookie-cat p{font-size:0.8rem;color:var(--text-light);line-height:1.55;margin:0;}
+.cookie-always{font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;}
+.cookie-switch{position:relative;display:inline-block;width:42px;height:24px;flex:none;}
+.cookie-switch input{opacity:0;width:0;height:0;}
+.cookie-slider{position:absolute;cursor:pointer;inset:0;background:#ccc;border-radius:24px;transition:0.3s;}
+.cookie-slider:before{content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:0.3s;}
+.cookie-switch input:checked + .cookie-slider{background:var(--accent);}
+.cookie-switch input:checked + .cookie-slider:before{transform:translateX(18px);}
+.cookie-modal-box .cookie-actions{margin-top:18px;}
+@media(max-width:768px){.cookie-banner{left:16px;right:16px;bottom:16px;max-width:none;}}
 
 /* ─── BLOG ─── */
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
@@ -1361,16 +1382,50 @@ a{color:inherit;text-decoration:none;}
     </div>
     <div class="footer-bottom">
       <span>&copy; 2025 Data Vision Tech Solutions Pvt Limited. All rights reserved.</span>
-      <span class="footer-legal"><a href="privacy.html">Privacy Policy</a> &middot; <a href="Terms and conditions.pdf" target="_blank" rel="noopener">Terms &amp; Conditions</a></span>
+      <span class="footer-legal"><a href="privacy.html">Privacy Policy</a> &middot; <a href="Terms and conditions.pdf" target="_blank" rel="noopener">Terms &amp; Conditions</a> &middot; <a href="#" onclick="dvOpenPrefs();return false;">Cookie settings</a></span>
       <span>datavisiontechsolutions.com</span>
     </div>
   </div>
 </footer>
 
-<!-- COOKIE NOTICE -->
-<div class="cookie-bar" id="cookieBar" role="dialog" aria-label="Cookie notice">
-  <p>We use essential cookies and load web fonts to make this site work. We don't use tracking or advertising cookies. See our <a href="privacy.html">Privacy Policy</a>.</p>
-  <button class="btn btn-primary" onclick="acceptCookies()">Got it</button>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <p class="cookie-title">We value your privacy</p>
+  <p>We use essential cookies to make this site work. With your consent we'd also like to use analytics and marketing cookies to understand traffic and improve our service. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary" onclick="dvAcceptAll()">Accept all</button>
+    <button class="btn btn-ghost" onclick="dvRejectAll()">Reject all</button>
+    <button class="btn btn-ghost" onclick="dvOpenPrefs()">Cookie settings</button>
+  </div>
+</div>
+
+<!-- COOKIE PREFERENCES MODAL -->
+<div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-label="Cookie preferences">
+  <div class="cookie-modal-box">
+    <h3>Cookie preferences</h3>
+    <p class="cookie-modal-desc">Choose which cookies we may use. Essential cookies are always on because the site cannot work without them. You can change these choices at any time.</p>
+    <div class="cookie-cat">
+      <div class="cookie-cat-head"><strong>Essential</strong><span class="cookie-always">Always on</span></div>
+      <p>Required for the site to function &mdash; remembering your cookie choice and enabling the contact form. No tracking.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-head"><strong>Analytics</strong>
+        <label class="cookie-switch"><input type="checkbox" id="ckAnalytics"><span class="cookie-slider"></span></label>
+      </div>
+      <p>Anonymous usage statistics (e.g. Google Analytics) so we can see which pages help visitors and improve the site.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat-head"><strong>Marketing</strong>
+        <label class="cookie-switch"><input type="checkbox" id="ckMarketing"><span class="cookie-slider"></span></label>
+      </div>
+      <p>Used to measure and improve our advertising (e.g. Meta Pixel). Only set if you allow it.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-primary" onclick="dvSavePrefs()">Save choices</button>
+      <button class="btn btn-ghost" onclick="dvAcceptAll()">Accept all</button>
+      <button class="btn btn-ghost" onclick="dvRejectAll()">Reject all</button>
+    </div>
+  </div>
 </div>
 
 <!-- WHATSAPP FLOATING BUTTON -->
@@ -1454,17 +1509,57 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// Cookie notice
-function acceptCookies(){
-  try{localStorage.setItem('dvCookieOk','1');}catch(e){}
-  document.getElementById('cookieBar').classList.remove('show');
+// ─── COOKIE CONSENT MANAGER ───
+// TODO: replace these placeholders with your real IDs (nothing tracks until then AND until the visitor opts in)
+var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';     // Google Analytics 4 Measurement ID
+var META_PIXEL_ID     = 'XXXXXXXXXXXXXXX';   // Meta / Facebook Pixel ID
+var DV_CONSENT_KEY = 'dvConsent_v1';
+var dvLoaded = {analytics:false, marketing:false};
+
+function dvGetConsent(){ try{return JSON.parse(localStorage.getItem(DV_CONSENT_KEY));}catch(e){return null;} }
+function dvSaveConsent(c){ c.ts=new Date().toISOString(); c.v=1; try{localStorage.setItem(DV_CONSENT_KEY,JSON.stringify(c));}catch(e){} }
+
+function dvLoadAnalytics(){
+  if(dvLoaded.analytics || !GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf('XXX')>-1) return;
+  dvLoaded.analytics=true;
+  var s=document.createElement('script'); s.async=true;
+  s.src='https://www.googletagmanager.com/gtag/js?id='+GA_MEASUREMENT_ID;
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments);};
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID, {anonymize_ip:true});
+}
+function dvLoadMarketing(){
+  if(dvLoaded.marketing || !META_PIXEL_ID || META_PIXEL_ID.indexOf('XXX')>-1) return;
+  dvLoaded.marketing=true;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', META_PIXEL_ID); fbq('track','PageView');
+}
+function dvApply(c){ if(c&&c.analytics)dvLoadAnalytics(); if(c&&c.marketing)dvLoadMarketing(); }
+
+function dvShowBanner(){ document.getElementById('cookieBanner').classList.add('show'); }
+function dvHideBanner(){ document.getElementById('cookieBanner').classList.remove('show'); }
+function dvOpenPrefs(){
+  var c=dvGetConsent()||{analytics:false,marketing:false};
+  document.getElementById('ckAnalytics').checked=!!c.analytics;
+  document.getElementById('ckMarketing').checked=!!c.marketing;
+  document.getElementById('cookieModal').classList.add('show');
+}
+function dvClosePrefs(){ document.getElementById('cookieModal').classList.remove('show'); }
+function dvAcceptAll(){ var c={essential:true,analytics:true,marketing:true}; dvSaveConsent(c); dvApply(c); dvHideBanner(); dvClosePrefs(); }
+function dvRejectAll(){ var c={essential:true,analytics:false,marketing:false}; dvSaveConsent(c); dvHideBanner(); dvClosePrefs(); }
+function dvSavePrefs(){
+  var c={essential:true,
+    analytics:document.getElementById('ckAnalytics').checked,
+    marketing:document.getElementById('ckMarketing').checked};
+  dvSaveConsent(c); dvApply(c); dvHideBanner(); dvClosePrefs();
 }
 (function(){
-  try{
-    if(!localStorage.getItem('dvCookieOk')){
-      setTimeout(()=>document.getElementById('cookieBar').classList.add('show'),800);
-    }
-  }catch(e){}
+  var c=dvGetConsent();
+  if(!c){ setTimeout(dvShowBanner,800); } else { dvApply(c); }
 })();
 </script>
 </body>
