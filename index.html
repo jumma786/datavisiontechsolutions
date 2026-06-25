@@ -323,6 +323,9 @@ a{color:inherit;text-decoration:none;}
 .mat-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 20px;text-align:center;transition:all var(--transition);}
 .mat-card:hover{border-color:var(--accent);box-shadow:var(--shadow-sm);}
 .mat-icon{width:56px;height:56px;background:linear-gradient(135deg,#d4d8e0 0%,#b8bcc8 100%);border-radius:12px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;}
+.mat-media{position:relative;height:128px;margin:-28px -20px 16px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef1f5 0%,#e3e7ee 100%);}
+.mat-media .mat-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.mat-media .mat-icon{margin:0;}
 .mat-card h3{font-size:0.9rem;font-weight:600;margin-bottom:4px;}
 .mat-card .code{font-size:0.7rem;font-weight:600;color:var(--accent);letter-spacing:0.08em;margin-bottom:8px;}
 .mat-card p{font-size:0.78rem;color:var(--text-light);line-height:1.6;}
@@ -823,70 +826,70 @@ a{color:inherit;text-decoration:none;}
     <p class="banner-credit reveal">Illustrative image: <a href="https://commons.wikimedia.org/wiki/File:Scrap_metal_pile_-_geograph.org.uk_-_4305959.jpg" target="_blank" rel="noopener">Scrap metal pile</a> &copy; Ian Capper, CC BY-SA 2.0 (Wikimedia Commons).</p>
     <div class="mat-grid">
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M4 10h16M4 14h16"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-ferrous.jpg" alt="Ferrous steel and cast iron scrap" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M4 10h16M4 14h16"/></svg></div></div>
         <h3>Ferrous Metal</h3>
         <div class="code">STEEL &amp; IRON</div>
         <p>Heavy &amp; light steel (HMS 1&amp;2), cast iron, plate &amp; girder, turnings &amp; baling grade</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-copper.jpg" alt="Copper scrap" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b87333" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg></div></div>
         <h3>Copper</h3>
         <div class="code">CU</div>
         <p>Bright/shiny wire, No.1 &amp; No.2 copper, tube, braziery &amp; tinned/mixed copper</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-aluminium.jpg" alt="Aluminium scrap" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div></div>
         <h3>Aluminium</h3>
         <div class="code">AL</div>
         <p>UBC cans, alloy wheels, extrusion (6063), taint/tabor, litho, cast &amp; turnings</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a24e" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-brass.jpg" alt="Brass scrap" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c8a24e" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div></div>
         <h3>Brass</h3>
         <div class="code">BRASS</div>
         <p>Yellow &amp; mixed brass, fittings, taps, radiators, gunmetal &amp; turnings</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><path d="M12 3l7 4v10l-7 4-7-4V7z"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-stainless.jpg" alt="Stainless steel scrap" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><path d="M12 3l7 4v10l-7 4-7-4V7z"/></svg></div></div>
         <h3>Stainless Steel</h3>
         <div class="code">304 / 316</div>
         <p>304 &amp; 316 grades, magnetic &amp; non-magnetic, sheet, offcuts &amp; turnings</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><rect x="5" y="9" width="14" height="6" rx="2"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-lead.jpg" alt="Lead scrap" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><rect x="5" y="9" width="14" height="6" rx="2"/></svg></div></div>
         <h3>Lead</h3>
         <div class="code">PB</div>
         <p>Roofing sheet, pipe, lead-acid batteries, wheel weights &amp; mixed lead</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><path d="M4 12c4-6 12 6 16 0"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-cable.jpg" alt="Scrap cable and wire" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><path d="M4 12c4-6 12 6 16 0"/><circle cx="4" cy="12" r="1.5"/><circle cx="20" cy="12" r="1.5"/></svg></div></div>
         <h3>Cable &amp; Wire</h3>
         <div class="code">CABLE</div>
         <p>SWA armoured, data, house wire &amp; high-grade insulated copper / aluminium cable</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><rect x="3" y="11" width="13" height="6" rx="1"/><path d="M16 13h3l2 2v2h-5z"/><circle cx="7" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-elv.jpg" alt="End-of-life vehicles" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><rect x="3" y="11" width="13" height="6" rx="1"/><path d="M16 13h3l2 2v2h-5z"/><circle cx="7" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg></div></div>
         <h3>End-of-Life Vehicles</h3>
         <div class="code">ELV</div>
         <p>Cars, vans &amp; light commercials &mdash; depollution &amp; dismantling, CoD issued</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-plant.jpg" alt="Redundant plant and machinery" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div></div>
         <h3>Plant &amp; Machinery</h3>
         <div class="code">PLANT</div>
         <p>Redundant industrial machinery, electric motors, transformers &amp; switchgear</p>
         <div class="mat-status"><div class="mat-status-dot"></div>Actively Buying</div>
       </div>
       <div class="mat-card reveal">
-        <div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><path d="M3 20V9l5-3 5 3v11M13 20V12l5-3 3 2v9"/><path d="M2 20h20"/></svg></div>
+        <div class="mat-media"><img class="mat-photo" src="images/grade-factory.jpg" alt="Factory clearance scrap" loading="lazy" onerror="this.remove()"><div class="mat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8898a8" stroke-width="1.5"><path d="M3 20V9l5-3 5 3v11M13 20V12l5-3 3 2v9"/><path d="M2 20h20"/></svg></div></div>
         <h3>Factory Scrap</h3>
         <div class="code">CLEARANCE</div>
         <p>Full factory &amp; site clearance &mdash; production scrap, offcuts &amp; mixed metals</p>

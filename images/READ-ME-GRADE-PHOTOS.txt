@@ -1,0 +1,30 @@
+========================================================================
+ GRADE PHOTOS — "What We Buy" cards
+========================================================================
+
+Each metal card in the "All grades of ferrous & non-ferrous" section can
+show its own photo. Until a photo file exists, the card shows its tidy
+icon instead — so the site always looks finished.
+
+Drop your photos in THIS folder using these EXACT lower-case file names
+and they appear automatically (no code changes needed):
+
+  grade-ferrous.jpg     ->  Ferrous Metal (steel & iron)
+  grade-copper.jpg      ->  Copper
+  grade-aluminium.jpg   ->  Aluminium
+  grade-brass.jpg       ->  Brass
+  grade-stainless.jpg   ->  Stainless Steel
+  grade-lead.jpg        ->  Lead
+  grade-cable.jpg       ->  Cable & Wire
+  grade-elv.jpg         ->  End-of-Life Vehicles
+  grade-plant.jpg       ->  Plant & Machinery
+  grade-factory.jpg     ->  Factory Scrap
+
+Tips:
+  - Square-ish or landscape photos work best (shown ~square, cropped to fill).
+  - Aim for roughly 600 x 600 px, kept under ~200 KB so the site stays fast
+    (shrink free at https://squoosh.app).
+  - File names are case-sensitive on the web host: use lower-case .jpg
+  - Add as many or as few as you like — any card without a photo simply
+    keeps its icon.
+========================================================================
