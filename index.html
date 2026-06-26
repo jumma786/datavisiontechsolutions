@@ -57,179 +57,11 @@
   ]
 }
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316a34a'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='30' font-weight='bold' fill='white' text-anchor='middle'%3EDV%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23b4601c'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='30' font-weight='bold' fill='white' text-anchor='middle'%3EDV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --bg:#ffffff;--bg-alt:#f1f5f1;--ink:#13211a;--ink2:#1c2e25;
-  --steel:#27343a;--steel2:#33444c;--metal:#6b7785;--metal-l:#e6ebe7;
-  --green:#16a34a;--green-d:#0f7a37;--green-dd:#0c5e2b;--lime:#84cc16;--lime-l:#bef264;
-  --text:#1d2a23;--text-l:#566057;--border:#dde5de;
-  --radius:8px;--radius-lg:16px;--tr:.3s cubic-bezier(.2,.7,.3,1);--maxw:1200px;
-  --hazard:repeating-linear-gradient(45deg,#1a1a1a,#1a1a1a 16px,#f6c700 16px,#f6c700 32px);
-}
-html{scroll-behavior:smooth;}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;}
-a{color:var(--green-d);text-decoration:none;}
-img{max-width:100%;display:block;}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-h1,h2,h3,h4,.cond{font-family:'Barlow Condensed','Inter',sans-serif;letter-spacing:0.01em;}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:700;font-size:0.95rem;padding:13px 26px;border-radius:var(--radius);transition:all var(--tr);border:none;cursor:pointer;text-transform:uppercase;letter-spacing:0.03em;font-family:'Barlow Condensed',sans-serif;}
-.btn:hover{background:var(--green-d);transform:translateY(-2px);box-shadow:0 8px 20px -8px rgba(15,122,55,0.6);}
-.btn-lg{padding:16px 34px;font-size:1.05rem;}
-.btn-ghost{background:transparent;border:2px solid rgba(255,255,255,0.4);color:#fff;}
-.btn-ghost:hover{background:rgba(255,255,255,0.12);border-color:#fff;}
-.btn-yellow{background:#f6c700;color:#1a1a1a;}
-.btn-yellow:hover{background:#ffd420;}
-/* TOP BAR */
-.topbar{background:var(--steel);color:#cdd6cf;font-size:0.82rem;}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;flex-wrap:wrap;}
-.topbar a{color:#fff;font-weight:600;}
-.topbar .tb-r{display:flex;gap:18px;align-items:center;}
-.topbar .lic{color:var(--lime-l);font-weight:600;}
-/* NAV */
-.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:3px solid var(--green);}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
-.brand{display:flex;align-items:center;gap:12px;}
-.brand .logo{width:44px;height:44px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-family:'Barlow Condensed';font-size:1.1rem;box-shadow:inset 0 -3px 0 rgba(0,0,0,0.2);}
-.brand .bt{color:#fff;font-weight:800;font-size:1.25rem;font-family:'Barlow Condensed';line-height:1;text-transform:uppercase;}
-.brand .bt small{display:block;font-weight:500;font-size:0.62rem;color:var(--lime-l);letter-spacing:0.22em;font-family:'Inter';margin-top:2px;}
-.menu{display:flex;align-items:center;gap:26px;}
-.menu a{color:rgba(255,255,255,0.82);font-size:0.88rem;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;transition:color var(--tr);}
-.menu a:hover{color:var(--lime-l);}
-.nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;}
-/* HERO */
-.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:url('images/operations-1.jpg') center/cover no-repeat;opacity:0.30;}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,rgba(12,30,21,0.96) 35%,rgba(12,30,21,0.5) 100%);}
-.hero .wrap{position:relative;z-index:2;padding:84px 24px 92px;}
-.hero-inner{max-width:780px;}
-.kick{display:inline-flex;align-items:center;gap:10px;background:rgba(132,204,22,0.15);border:1px solid rgba(132,204,22,0.4);color:var(--lime-l);font-size:0.74rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:7px 14px;border-radius:30px;margin-bottom:22px;}
-.hero h1{font-size:clamp(2.6rem,6vw,4.5rem);font-weight:800;line-height:0.98;margin-bottom:20px;text-transform:uppercase;}
-.hero h1 .g{color:var(--lime);}
-.hero p{font-size:1.15rem;color:rgba(255,255,255,0.82);max-width:600px;margin-bottom:30px;}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
-.hbadges{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:0.85rem;color:rgba(255,255,255,0.75);}
-.hbadges span,.hb{display:flex;align-items:center;gap:8px;}
-.hb b{color:var(--lime);}
-.hazard{height:8px;background:var(--hazard);}
-/* STATS */
-.stats{background:var(--steel);color:#fff;}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:40px 24px;text-align:center;}
-.stat .num{font-family:'Barlow Condensed';font-size:2.6rem;font-weight:800;color:var(--lime);line-height:1;}
-.stat .lbl{font-size:0.85rem;color:#c2ccc4;margin-top:8px;}
-/* SECTION */
-section{padding:78px 0;}
-.sec-head{max-width:680px;margin-bottom:44px;}
-.sec-head.center{margin:0 auto 44px;text-align:center;}
-.sec-head .tag{display:inline-block;font-size:0.76rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);margin-bottom:12px;}
-.sec-head h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:800;line-height:1.05;text-transform:uppercase;color:var(--ink);margin-bottom:14px;}
-.sec-head p{color:var(--text-l);font-size:1.05rem;}
-.alt{background:var(--bg-alt);}
-.dark{background:var(--ink);color:#fff;}
-.dark .sec-head h2{color:#fff;}.dark .sec-head p{color:rgba(255,255,255,0.72);}.dark .sec-head .tag{color:var(--lime);}
-/* SERVICE CARDS */
-.grid{display:grid;gap:22px;}
-.g3{grid-template-columns:repeat(3,1fr);}.g4{grid-template-columns:repeat(4,1fr);}.g2{grid-template-columns:repeat(2,1fr);}
-.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--tr);}
-.card:hover{transform:translateY(-5px);box-shadow:0 18px 38px -18px rgba(19,33,26,0.3);border-color:var(--green);}
-.card .ph{height:170px;background:var(--ink) center/cover no-repeat;}
-.card .body{padding:22px;}
-.card h3{font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:7px;}
-.card p{color:var(--text-l);font-size:0.92rem;}
-/* GRADES */
-.grades{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.gcard{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--ink);min-height:220px;display:flex;align-items:flex-end;}
-.gcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.6;transition:all var(--tr);}
-.gcard:hover img{opacity:0.78;transform:scale(1.05);}
-.gcard .gc{position:relative;z-index:2;padding:22px;color:#fff;background:linear-gradient(180deg,transparent,rgba(8,20,14,0.92));width:100%;}
-.gcard h3{font-size:1.5rem;font-weight:700;margin-bottom:4px;}
-.gcard p{font-size:0.86rem;color:rgba(255,255,255,0.82);}
-.gcard .badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--lime);color:#13211a;font-weight:700;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;padding:4px 10px;border-radius:20px;}
-/* ALUMINIUM FEATURE */
-.alu{background:linear-gradient(135deg,var(--ink) 0%,var(--green-dd) 130%);color:#fff;border-radius:var(--radius-lg);overflow:hidden;}
-.alu-grid{display:grid;grid-template-columns:0.85fr 1.15fr;}
-.alu-img{background:url('images/grade-aluminium.jpg') center/cover;min-height:100%;position:relative;}
-.alu-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(12,30,21,0.6));}
-.alu-body{padding:44px 40px;}
-.alu-body .tag{color:var(--lime);font-weight:700;letter-spacing:0.14em;text-transform:uppercase;font-size:0.76rem;}
-.alu-body h2{font-size:2.4rem;font-weight:800;text-transform:uppercase;margin:8px 0 8px;}
-.alu-body>p{color:rgba(255,255,255,0.8);margin-bottom:22px;max-width:560px;}
-.alu-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.alu-item{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-left:3px solid var(--lime);border-radius:8px;padding:14px 16px;}
-.alu-item h4{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:3px;}
-.alu-item span{font-size:0.84rem;color:rgba(255,255,255,0.72);line-height:1.5;}
-/* WHY */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
-.split img{border-radius:var(--radius-lg);box-shadow:0 22px 46px -22px rgba(19,33,26,0.5);}
-.feat{display:flex;gap:15px;margin-bottom:22px;}
-.feat .ic{flex:none;width:46px;height:46px;border-radius:10px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;}
-.feat h4{font-size:1.2rem;color:var(--ink);margin-bottom:2px;}
-.feat p{color:var(--text-l);font-size:0.92rem;}
-.creds{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px;}
-.creds span{background:#fff;border:1px solid var(--border);border-radius:30px;padding:7px 15px;font-size:0.8rem;font-weight:600;color:var(--ink);}
-/* TESTIMONIALS */
-.tcols{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
-.tcol h3{font-size:1.6rem;text-transform:uppercase;color:var(--ink);margin-bottom:6px;display:flex;align-items:center;gap:10px;}
-.tcol .flagline{font-size:0.84rem;color:var(--text-l);margin-bottom:20px;}
-.quote{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:16px;border-top:4px solid var(--green);}
-.quote .stars{color:#f6c700;letter-spacing:2px;margin-bottom:10px;}
-.quote p{font-style:italic;color:var(--text);margin-bottom:12px;}
-.quote .who{font-weight:700;color:var(--ink);font-size:0.9rem;}
-.ph-note{margin-top:14px;font-size:0.8rem;color:var(--metal);font-style:italic;text-align:center;}
-/* CTA */
-.cta{background:var(--hazard);padding:6px;border-radius:var(--radius-lg);}
-.cta-in{background:var(--green-dd);color:#fff;border-radius:12px;padding:48px;text-align:center;}
-.cta-in h2{font-size:2.2rem;font-weight:800;text-transform:uppercase;margin-bottom:10px;}
-.cta-in p{color:rgba(255,255,255,0.88);max-width:520px;margin:0 auto 24px;}
-/* AREAS */
-.areas{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;}
-.areas span{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 16px;font-size:0.9rem;font-weight:600;color:#fff;}
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-.office{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:30px;border-top:4px solid var(--green);}
-.office .flag{font-size:0.74rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:10px;}
-.office h3{font-size:1.4rem;color:var(--ink);margin-bottom:12px;}
-.office p{color:var(--text-l);margin-bottom:6px;font-size:0.94rem;}
-.office .regs{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px;}
-.office .regs span{background:var(--bg-alt);border:1px solid var(--border);border-radius:20px;padding:5px 11px;font-size:0.74rem;color:var(--text-l);}
-/* FOOTER */
-.footer{background:var(--ink);color:rgba(255,255,255,0.62);padding:56px 0 24px;}
-.footer .cols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:38px;}
-.footer h5{color:#fff;font-size:1.1rem;text-transform:uppercase;margin-bottom:14px;}
-.footer ul{list-style:none;}.footer li{margin-bottom:8px;}
-.footer a{color:rgba(255,255,255,0.62);font-size:0.9rem;}.footer a:hover{color:var(--lime-l);}
-.footer .legal{border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.8rem;}
-/* WHATSAPP BUBBLE */
-.wa{position:fixed;right:22px;bottom:22px;z-index:80;display:flex;align-items:center;gap:0;background:#25D366;color:#fff;border-radius:50px;padding:0;box-shadow:0 8px 26px -6px rgba(0,0,0,0.4);overflow:hidden;transition:all var(--tr);}
-.wa .ico{width:60px;height:60px;display:flex;align-items:center;justify-content:center;flex:none;}
-.wa .ico svg{width:32px;height:32px;}
-.wa .lbl{max-width:0;white-space:nowrap;overflow:hidden;font-weight:700;font-family:'Barlow Condensed';font-size:1.05rem;text-transform:uppercase;transition:max-width var(--tr),padding var(--tr);}
-.wa:hover .lbl{max-width:200px;padding-right:22px;}
-.wa::before{content:'';position:absolute;inset:0;border-radius:50px;box-shadow:0 0 0 0 rgba(37,211,102,0.6);animation:pulse 2.2s infinite;}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.55);}70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
-/* RA RECYCLE POPUP */
-.modal-ov{position:fixed;inset:0;z-index:100;background:rgba(8,18,12,0.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:24px;}
-.modal-ov.show{display:flex;}
-.modal{background:#fff;border-radius:var(--radius-lg);max-width:560px;width:100%;overflow:hidden;position:relative;box-shadow:0 30px 70px -20px rgba(0,0,0,0.6);animation:pop .35s ease;}
-@keyframes pop{from{transform:scale(.92);opacity:0;}to{transform:scale(1);opacity:1;}}
-.modal .top{background:linear-gradient(135deg,var(--green-dd),var(--ink));color:#fff;padding:26px 30px;}
-.modal .top .flag{font-size:0.76rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--lime-l);font-weight:700;}
-.modal .top h3{font-size:1.8rem;text-transform:uppercase;margin-top:4px;}
-.modal .mb{padding:26px 30px 30px;}
-.modal .mb p{color:var(--text-l);margin-bottom:12px;font-size:0.95rem;}
-.modal .stat-row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px;}
-.modal .stat-row span{background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;padding:8px 13px;font-size:0.82rem;font-weight:600;color:var(--ink);}
-.modal .x{position:absolute;top:14px;right:16px;background:rgba(255,255,255,0.2);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:1.2rem;cursor:pointer;line-height:1;}
-.modal .x:hover{background:rgba(255,255,255,0.35);}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.in{opacity:1;transform:none;}
-@media(max-width:920px){.g4,.g3,.grades{grid-template-columns:repeat(2,1fr);}.alu-grid,.split,.tcols,.contact-grid,.g2{grid-template-columns:1fr;}.alu-img{min-height:220px;}.stats .wrap{grid-template-columns:repeat(2,1fr);}.footer .cols{grid-template-columns:1fr 1fr;}.menu{display:none;}.nav-toggle{display:block;}.menu.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--ink);padding:20px 24px;gap:16px;border-bottom:3px solid var(--green);}}
-@media(max-width:540px){.grades,.g4,.g3,.stats .wrap,.alu-list{grid-template-columns:1fr;}.cta-in{padding:32px 22px;}.hero .wrap{padding:60px 24px 70px;}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -316,12 +148,12 @@ section{padding:78px 0;}
           <h2>Aluminium Scrap — All Grades</h2>
           <p>We buy every grade of aluminium scrap, sorted or mixed, and pay closest to market for clean, single-grade material.</p>
           <div class="alu-list">
-            <div class="alu-item"><h4>UBC</h4><span>Used beverage cans — loose or baled drink cans.</span></div>
-            <div class="alu-item"><h4>Extrusion (6063)</h4><span>Clean window &amp; door section offcuts — top aluminium grade.</span></div>
-            <div class="alu-item"><h4>Taint / Tabor (TT)</h4><span>Mixed painted &amp; coated aluminium sheet and clippings, low copper.</span></div>
-            <div class="alu-item"><h4>Sheet</h4><span>Clean aluminium sheet, litho and plate.</span></div>
-            <div class="alu-item"><h4>Radiators</h4><span>Aluminium and aluminium-copper radiators.</span></div>
-            <div class="alu-item"><h4>Cast &amp; Alloy</h4><span>Cast aluminium, wheels, LM grades and turnings.</span></div>
+            <a class="alu-item" href="what-we-buy.html#ubc" style="display:block;text-decoration:none"><h4>UBC</h4><span>Used beverage cans — loose or baled drink cans.</span></a>
+            <a class="alu-item" href="what-we-buy.html#extrusion" style="display:block;text-decoration:none"><h4>Extrusion (6063)</h4><span>Clean window &amp; door section offcuts — top aluminium grade.</span></a>
+            <a class="alu-item" href="what-we-buy.html#taint-tabor" style="display:block;text-decoration:none"><h4>Taint / Tabor (TT)</h4><span>Mixed painted &amp; coated aluminium sheet and clippings, low copper.</span></a>
+            <a class="alu-item" href="what-we-buy.html#alu-sheet" style="display:block;text-decoration:none"><h4>Sheet</h4><span>Clean aluminium sheet, litho and plate.</span></a>
+            <a class="alu-item" href="what-we-buy.html#alu-radiators" style="display:block;text-decoration:none"><h4>Radiators</h4><span>Aluminium and aluminium-copper radiators.</span></a>
+            <a class="alu-item" href="what-we-buy.html#cast-alloy" style="display:block;text-decoration:none"><h4>Cast &amp; Alloy</h4><span>Cast aluminium, wheels, LM grades and turnings.</span></a>
           </div>
         </div>
       </div>
@@ -490,6 +322,11 @@ document.getElementById('raModal').addEventListener('click',function(e){if(e.tar
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeRA();});
 // auto-show once per browser session, after a short delay
 try{if(!sessionStorage.getItem('raSeen')){setTimeout(()=>{openRA();sessionStorage.setItem('raSeen','1');},2600);}}catch(e){}
+</script>
+<script>
+(function(){var map={'copper':'copper','brass':'brass','stainless':'stainless','lead':'lead','cable':'cable','ferrous':'ferrous','end-of-life':'elv','plant':'plant','factory':'factory'};
+document.querySelectorAll('.gcard').forEach(function(c){var h=(c.querySelector('h3')||{}).textContent||'';h=h.toLowerCase();var a=null;for(var k in map){if(h.indexOf(k)>-1){a=map[k];break;}}if(a){c.style.cursor='pointer';c.addEventListener('click',function(){window.location.href='what-we-buy.html#'+a;});}});
+})();
 </script>
 </body>
 </html>
