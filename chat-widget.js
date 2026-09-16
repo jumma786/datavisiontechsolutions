@@ -6,17 +6,15 @@
 (function () {
   var ACCENT = "#c8842e", DARK = "#0f1923";
   var PHONE_DISPLAY = "+44 7442 001088";
-  var PHONE_TEL = "+447442001088";
   var ALT_PHONE_DISPLAY = "+44 7432 226497";
-  var ALT_PHONE_TEL = "+447432226497";
   var WA = "https://wa.me/447442001088";
   var ALT_WA = "https://wa.me/447432226497";
   var EMAIL = "info@datavisiontechsolutions.com";
 
   // Reusable trusted-HTML snippet for contact actions.
   var CONTACT = 'You can reach us any time: '
-    + '<a href="tel:' + PHONE_TEL + '">' + PHONE_DISPLAY + '</a> · '
-    + '<a href="tel:' + ALT_PHONE_TEL + '">' + ALT_PHONE_DISPLAY + '</a> · '
+    + '<a href="' + WA + '" target="_blank" rel="noopener">' + PHONE_DISPLAY + '</a> · '
+    + '<a href="' + ALT_WA + '" target="_blank" rel="noopener">' + ALT_PHONE_DISPLAY + '</a> · '
     + '<a href="' + WA + '" target="_blank" rel="noopener">WhatsApp (Primary)</a> · '
     + '<a href="' + ALT_WA + '" target="_blank" rel="noopener">WhatsApp (Alternative)</a> · '
     + '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>.';
